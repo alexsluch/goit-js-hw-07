@@ -1,0 +1,16 @@
+body {
+  margin: 24px;
+  font-family: system-ui, sans-serif;
+}
+
+#controls {
+  display: flex;
+  gap: 8px;
+  margin-bottom: 16px;
+}
+
+#boxes {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 4px;
+}
