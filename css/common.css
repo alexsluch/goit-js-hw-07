@@ -9,20 +9,95 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   background-color: #fafafa;
-  color: #212121;
+  color: #2e2f42;
   line-height: 1.5;
 }
 
+button {
+  cursor: pointer;
+  padding: 8px 24px;
+  border: none;
+  border-radius: 8px;
+  background-color: #4e75ff;
+  color: #ffffff;
+  font: inherit;
+  font-weight: 500;
+  transition: background-color 200ms ease;
+}
+
+button:hover,
+button:focus {
+  background-color: #6c8cff;
+}
+
+input {
+  padding: 8px 16px;
+  border: 1px solid #808080;
+  border-radius: 4px;
+  font: inherit;
+  background-color: #ffffff;
+}
+
+input:focus {
+  outline: none;
+  border-color: #4e75ff;
+}
+
+a {
+  color: #4e75ff;
+}
+
+/* === Task 1. Categories === */
+#categories {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  list-style: none;
+  padding: 0;
+  max-width: 392px;
+}
+
+#categories .item {
+  padding: 16px;
+  background-color: #f6f6fe;
+  border-radius: 8px;
+}
+
+#categories .item h2 {
+  margin: 0 0 16px;
+  font-size: 24px;
+}
+
+#categories .item ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+#categories .item ul li {
+  padding: 8px 16px;
+  background-color: #ffffff;
+  border-radius: 4px;
+  border: 1px solid #808080;
+}
+
+/* === Task 2. Gallery === */
 .gallery {
   display: flex;
-  gap: 16px;
+  gap: 24px;
   list-style: none;
   padding: 0;
   flex-wrap: wrap;
 }
 
 .gallery-item {
-  width: 320px;
+  width: 360px;
+  border-radius: 8px;
+  overflow: hidden;
+  background-color: #f6f6fe;
 }
 
 .gallery-image {
@@ -32,27 +107,84 @@ body {
   object-fit: cover;
 }
 
+/* === Task 4. Login form === */
 .login-form {
   display: flex;
   flex-direction: column;
-  gap: 12px;
-  max-width: 320px;
+  gap: 16px;
+  width: 408px;
+  padding: 24px;
+  background-color: #f6f6fe;
+  border-radius: 8px;
 }
 
 .login-form label {
   display: flex;
   flex-direction: column;
-  gap: 4px;
+  gap: 8px;
+  font-weight: 500;
 }
 
+.login-form button {
+  align-self: flex-start;
+}
+
+/* === Task 5. Color widget === */
+.widget {
+  width: 408px;
+  padding: 24px;
+  background-color: #f6f6fe;
+  border-radius: 8px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.widget p {
+  margin: 0;
+  font-weight: 500;
+}
+
+.widget .color {
+  font-weight: 700;
+}
+
+.change-color {
+  align-self: flex-start;
+}
+
+/* === Task 6. Boxes === */
 #controls {
   display: flex;
   gap: 8px;
   margin-bottom: 16px;
+  align-items: center;
+  padding: 16px;
+  background-color: #f6f6fe;
+  border-radius: 8px;
+  width: fit-content;
+}
+
+#controls input {
+  width: 150px;
+}
+
+#controls [data-create] {
+  background-color: #4e75ff;
+}
+
+#controls [data-destroy] {
+  background-color: #ff4e4e;
+}
+
+#controls [data-destroy]:hover,
+#controls [data-destroy]:focus {
+  background-color: #ff7676;
 }
 
 #boxes {
   display: flex;
   flex-wrap: wrap;
-  gap: 4px;
+  gap: 8px;
+  align-items: flex-start;
 }
