@@ -1,12 +1,12 @@
-const loginForm = document.querySelector(".login-form");
+const loginForm = document.querySelector('.login-form');
 
-loginForm.addEventListener("submit", (event) => {
+loginForm.addEventListener('submit', (event) => {
   event.preventDefault();
 
   const { email, password } = event.currentTarget.elements;
 
-  if (email.value.trim() === "" || password.value.trim() === "") {
-    alert("All form fields must be filled in");
+  if (email.value.trim() === '' || password.value.trim() === '') {
+    alert('All form fields must be filled in');
     return;
   }
 
